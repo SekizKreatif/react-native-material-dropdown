@@ -502,6 +502,10 @@ export default class Dropdown extends PureComponent {
     title = null == title || 'string' === typeof title?
       title:
       String(title);
+    
+    if(this.props.customComponent){
+      return this.props.customComponent;
+    }
 
     return (
       <TextField
